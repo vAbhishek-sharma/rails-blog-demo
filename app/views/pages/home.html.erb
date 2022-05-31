@@ -6,6 +6,9 @@
 
 <div class="container">
     <% @first5post.each do |post| %>
-        <%= render  post %>
-    <% end %>
+    <%= render  post %>
+        <p>
+            <%= link_to "Read Blog Post", post %>
+        </p>
+     <% end %>
 </div>
