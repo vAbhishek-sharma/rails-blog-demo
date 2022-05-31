@@ -1,3 +1,11 @@
-<h1>Home Page</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to 'about', about_path, class: 'link' %>
+<div class="container">
+    <h1>Home Page</h1>
+    <p>Find me in app/views/pages/home.html.erb</p>
+    <%= link_to 'about', about_path, class: 'link' %>
+</div>
+
+<div class="container">
+    <% @first5post.each do |post| %>
+        <%= render  post %>' %>
+    <% end %>
+</div>
