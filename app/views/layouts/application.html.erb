@@ -14,7 +14,14 @@
   <body>
 
   <main >
+  <header>
   <%= render 'layouts/navbar' %>
+   </header>
+   <div class="">
+    <p class="notice"><%= notice %> </p>
+    <p class="alert"><%= alert %> </p>
+
+   </div>
     <%= yield %>
     </main>
   </body>

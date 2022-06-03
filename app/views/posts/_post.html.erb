@@ -1,9 +1,21 @@
 <div id="<%= dom_id post %>">
+<% if notice %>
+  <p class="notice"><%= notice %></p>
+<% elsif alert %>
+  <p class="alert"><%= alert %></p>
+<% end %>
+  <p>
+
+    <%= pluralize(post.views,'view') %>
+  </p>
   <p>
     <strong>Title:</strong>
     <%= post.title %>
   </p>
 
+<h4>
+<%= post.user.name %>
+</h4>
   <p>
     <strong>Body:</strong>
     <%= post.body %>
