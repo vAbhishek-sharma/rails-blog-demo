@@ -1,0 +1,17 @@
+<div class="comment-<%= comment.id %>  container" >
+    <div class="comment">
+        <%= comment.user.email %>
+        <span class="">
+            <%= time_ago_in_words(comment.created_at) %>
+        </span>
+        <% if current_user == comment.user %>
+            <div class="button-group float-start">
+                <%= button_to 'Delete', [post,comment], class: "btn btn-primary" , method: :delete %>
+            </div>
+
+        <% end %>
+    </div>
+<br />
+           <%= comment.body %>
+
+</div>
